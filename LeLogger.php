@@ -4,10 +4,14 @@
  * Logging library for use with Logentries
  *
  * Usage:
- * $log = LeLogger::getLogger('mylogger', 'ad43g-dfd34-df3ed-3d3d3');
+ * $params = array('logger_name' => 'myapp', 'token' => 'XXXXXXX');
+ * $this->load->library('LeLogger', $params,'log');
  * $log->Info("I'm an informational message");
  * $log->Warn("I'm a warning message");
- *
+ * 
+ * forked from https://github.com/logentries/le_php
+ * @author Brandon Brisbon <holla@brandonbrisbon.com>
+ * 
  * Design inspired by KLogger library which is available at
  *   https://github.com/katzgrau/KLogger.git
  *
