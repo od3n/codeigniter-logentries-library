@@ -75,7 +75,7 @@ class LeLogger
             'use_tcp' => true,
             'severity' => false);
 
-        $args = parse_args( $params, $default_params);
+        $args = $this->parse_args( $params, $default_params);
 
         extract( $args, EXTR_SKIP );
 
