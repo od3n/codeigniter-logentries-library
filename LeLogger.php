@@ -6,8 +6,8 @@
  * Usage:
  * $params = array('logger_name' => 'myapp', 'token' => 'XXXXXXX');
  * $this->load->library('LeLogger', $params,'log');
- * $log->Info("I'm an informational message");
- * $log->Warn("I'm a warning message");
+ * $this->log->Info("I'm an informational message");
+ * $this->log->Warn("I'm a warning message");
  * 
  * forked from https://github.com/logentries/le_php
  * @author Brandon Brisbon <holla@brandonbrisbon.com>
@@ -81,7 +81,7 @@ class LeLogger
 
         if ($severity === false)
         {
-            $this->_severityThreshold = self::DEBUG;
+            $severity = self::DEBUG;
         }
 
         $this->_loggerName = $logger_name;
